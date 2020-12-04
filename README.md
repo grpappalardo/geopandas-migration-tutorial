@@ -1,6 +1,6 @@
 # Geopandas Migration Tutorial
 ![](geopslide.JPG)
-*Note: No pandas were harmed in the making of this tutorial. 
+*Note: No pandas were harmed in the making of this tutorial.* 
 
 Geopandas is an extension of Pandas, which is an open source Python project for data analysis and visualization in Python. Began in 2008, a key feature is DataFrame objects, which are used to analyze data from a variety of formats (CSV, text, Excel, SQL, HDF5). GeoPandas empowers the GIS-minded Python programmer and “extends the datatypes used by Pandas to allow spatial operations on geometric types. Geometric operations are performed by shapely. Geopandas further depends on fiona for file access and descartes and matplotlib for plotting.” With Geopandas, you can do many GIS tasks, including make a map, analyze geospatial data, and merge data (akin to Lab 4).
 
@@ -10,7 +10,7 @@ But I also really like pandas….Even if they aren’t very interested in coding
 
 ![](geopslide2.jpg)
 
-Duong Vu’s 2018 tutorial on DataCamp called [“Introduction to Geospatial Data in Python”](https://www.datacamp.com/community/tutorials/geospatial-data-python) helped tremendously, and its use of packages and techniques is what my project is developed from and extends upon.
+Duong Vu’s 2018 tutorial on DataCamp, [“Introduction to Geospatial Data in Python”](https://www.datacamp.com/community/tutorials/geospatial-data-python), helped tremendously, and its use of packages and techniques is what my project is developed from and extends upon.
 Just to recap, spatial data is data that has as a core component a location denoted using a geographic coordinate system. This is often in latitude/longitude, but remember maps use projected coordinate systems and always have some level of distortion. That tutorial plots the course of Hurricane Florence, which connected to my interest in visualizing something in motion. 
 
 Now, technology has to be used for something, and my geographic interest centers on Russia and Central Asia. Therefore, I decided to plot migration patterns in the region via graph. After the fall of the Soviet Union, many ethnic Russians in Kazakhstan immigrated to Russia, to the point where while in 1991 only 40% of the nation was ethnically Kazakh, that figure now stands at almost 70% (The Diplomat).
@@ -19,51 +19,60 @@ This massive emigration is linked to dropping energy prices and the Kazakh econo
 Mapping and visualizing migration and movement is hard and has been done in several ways over the years.
 
 ![](napoleanmap.jpg)
---map showing the movement of Napoleon's troops into and back out of Russia
+--map showing the movement of Napoleon's troops into and back out of Russia.
 
 ![](peoplemovin.jpg)
-Visualization of migration between all countries
+Visualization of migration between all countries.
 
 ![](refugeeproject.jpg)
-Web map of global refugee movement
+Web map of global refugee movement.
 
-My contribution to this rich body of work uses geopandas and pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration from 1962 to 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
+My contribution to this rich body of work uses Geopandas and Pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration for each between 1962 and 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
 
-##Tutorial Instructions
+## Tutorial Instructions
 
 First, install Geopandas to Colab.
-`!pip install GeoPandas`
+```
+!pip install GeoPandas
+```
 
 Next, import several other useful and realted packages.
 
-`import numpy as np
+```
+import numpy as np
 import pandas as pd
 from shapely.geometry import Point
 import csv
 import matplotlib.pyplot as plt
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
-% matplotlib inline`
+% matplotlib inline
+```
 
 When I had trouble getting Geopandas to run, I used iterative development to check the status.
 
-` import sys
-'geopandas' in sys.modules`
+```
+import sys
+'geopandas' in sys.modules
+```
 
 A `True` return was the goal.
 
 Upload `countries.geojson` using Colab's import files method. This format holds geographic and attribute data, in this case of the world's countries.
 
-`from google.colab import files
-uploaded = files.upload()`
+```
+from google.colab import files
+uploaded = files.upload()
+```
 
 The attibute data can be reviewed by reading the file with Geopandas.
-`countries = geopandas.read_file("countries.geojson")
-countries.head()`
 
+```
+countries = geopandas.read_file("countries.geojson")
+countries.head()
+```
 
-
-##Credits
+## Credits
 
 Aspects of this tutorial and several parts of the code come from the following sources
 [DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax)
