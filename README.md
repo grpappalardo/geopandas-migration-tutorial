@@ -7,7 +7,7 @@ My goal for this project was learn a new GIS-related technology so Geopandas stu
 
 But I also really like pandas….Even if they aren’t very interested in coding.
 
-![](geopslide2.JPG)
+![](geopslide2.jpg)
 
 Duong Vu’s 2018 tutorial on DataCamp called [“Introduction to Geospatial Data in Python”](https://www.datacamp.com/community/tutorials/geospatial-data-python) helped tremendously, and its use of packages and techniques is what my project is developed from and extends upon.
 Just to recap, spatial data is data that has as a core component a location denoted using a geographic coordinate system. This is often in latitude/longitude, but remember maps use projected coordinate systems and always have some level of distortion. That tutorial plots the course of Hurricane Florence, which connected to my interest in visualizing something in motion. 
