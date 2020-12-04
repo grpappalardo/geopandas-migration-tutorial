@@ -1,6 +1,6 @@
 # Geopandas Migration Tutorial
 ![](geopslide.JPG)
-Note: No pandas were harmed in the making of this tutorial. 
+*Note: No pandas were harmed in the making of this tutorial. 
 
 Geopandas is an extension of Pandas, which is an open source Python project for data analysis and visualization in Python. Began in 2008, a key feature is DataFrame objects, which are used to analyze data from a variety of formats (CSV, text, Excel, SQL, HDF5). GeoPandas empowers the GIS-minded Python programmer and “extends the datatypes used by Pandas to allow spatial operations on geometric types. Geometric operations are performed by shapely. Geopandas further depends on fiona for file access and descartes and matplotlib for plotting.” With Geopandas, you can do many GIS tasks, including make a map, analyze geospatial data, and merge data (akin to Lab 4).
 
@@ -18,11 +18,18 @@ This massive emigration is linked to dropping energy prices and the Kazakh econo
 
 Mapping and visualizing migration and movement is hard and has been done in several ways over the years.
 
--
--
--
+![](napoleanmap.jpg)
+--map showing the movement of Napoleon's troops into and back out of Russia
 
-My contribution to this rich body is work uses geopandas and pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration from 1962 to 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
+![](peoplemovin.jpg)
+Visualization of migration between all countries
+
+![](refugeeproject.jpg)
+Web map of global refugee movement
+
+My contribution to this rich body of work uses geopandas and pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration from 1962 to 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
+
+##Tutorial Instructions
 
 First, install Geopandas to Colab.
 `!pip install GeoPandas`
@@ -42,6 +49,7 @@ When I had trouble getting Geopandas to run, I used iterative development to che
 
 ` import sys
 'geopandas' in sys.modules`
+
 A `True` return was the goal.
 
 Upload `countries.geojson` using Colab's import files method. This format holds geographic and attribute data, in this case of the world's countries.
@@ -55,12 +63,9 @@ countries.head()`
 
 
 
---
-
-CREDITS
+##Credits
 
 Aspects of this tutorial and several parts of the code come from the following sources
-
 [DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax)
 [DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson`)
 [Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and remove indexing)
