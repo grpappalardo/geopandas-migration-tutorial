@@ -1,6 +1,7 @@
-# geopandas-migration-tutorial
+# Geopandas Migration Tutorial
 ![](geopslide.JPG)
-No pandas were harmed in the making of this tutorial. 
+Note: No pandas were harmed in the making of this tutorial. 
+
 Geopandas is an extension of Pandas, which is an open source Python project for data analysis and visualization in Python. Began in 2008, a key feature is DataFrame objects, which are used to analyze data from a variety of formats (CSV, text, Excel, SQL, HDF5). GeoPandas empowers the GIS-minded Python programmer and “extends the datatypes used by Pandas to allow spatial operations on geometric types. Geometric operations are performed by shapely. Geopandas further depends on fiona for file access and descartes and matplotlib for plotting.” With Geopandas, you can do many GIS tasks, including make a map, analyze geospatial data, and merge data (akin to Lab 4).
 
 My goal for this project was learn a new GIS-related technology so Geopandas stuck out to me as a great technology to explore. The basic data structures in GeoPandas are GeoSeries and GeoDataFrame (subclasses of Pandas Series and DataFrame).
@@ -16,6 +17,30 @@ Now, technology has to be used for something, and my geographic interest centers
 This massive emigration is linked to dropping energy prices and the Kazakh economy, but also, more broadly and perhaps enduringly, due to ethnic tensions. Many Russians who leave are skilled professionals, and they in general want to return to their ancestral homeland. Relatedly, 90% of the almost 1 million new Kazakhstani citizens since 1992 are ethnic Kazakhs ([The Diplomat](https://thediplomat.com/2016/02/why-are-russians-leaving-kazakhstan/)).
 
 Mapping and visualizing migration and movement is hard and has been done in several ways over the years.
+
+-
+-
+-
+
+My contribution to this rich body is work uses geopandas and pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration from 1962 to 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
+
+1. Install Geopandas to colab
+`!pip install GeoPandas`
+
+2. Next, 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
