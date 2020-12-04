@@ -24,10 +24,47 @@ Mapping and visualizing migration and movement is hard and has been done in seve
 
 My contribution to this rich body is work uses geopandas and pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration from 1962 to 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
 
-1. Install Geopandas to colab
+First, install Geopandas to Colab.
 `!pip install GeoPandas`
 
-2. Next, 
+Next, import several other useful and realted packages.
+
+`import numpy as np
+import pandas as pd
+from shapely.geometry import Point
+import csv
+import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+% matplotlib inline`
+
+When I had trouble getting Geopandas to run, I used iterative development to check the status.
+
+` import sys
+'geopandas' in sys.modules`
+A `True` return was the goal.
+
+Upload `countries.geojson` using Colab's import files method. This format holds geographic and attribute data, in this case of the world's countries.
+
+`from google.colab import files
+uploaded = files.upload()`
+
+The attibute data can be reviewed by reading the file with Geopandas.
+`countries = geopandas.read_file("countries.geojson")
+countries.head()`
+
+
+
+--
+
+CREDITS
+
+Aspects of this tutorial and several parts of the code come from the following sources
+
+[DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax)
+[DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson`)
+[Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and remove indexing)
+
 
 
 
