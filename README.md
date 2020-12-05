@@ -1,4 +1,3 @@
-# Geopandas Migration Tutorial
 ![](geopslide.JPG)
 *Note: No pandas were harmed in the making of this tutorial.* 
 
