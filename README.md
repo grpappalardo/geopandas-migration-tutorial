@@ -1,4 +1,5 @@
 ![](geopslide.JPG)
+
 *Note: No pandas were harmed in the making of this tutorial.* 
 
 Geopandas is an extension of Pandas, which is an open source Python project for data analysis and visualization in Python. Began in 2008, a key feature is DataFrame objects, which are used to analyze data from a variety of formats (CSV, text, Excel, SQL, HDF5). GeoPandas empowers the GIS-minded Python programmer and “extends the datatypes used by Pandas to allow spatial operations on geometric types. Geometric operations are performed by shapely. Geopandas further depends on fiona for file access and descartes and matplotlib for plotting.” With Geopandas, you can do many GIS tasks, including make a map, analyze geospatial data, and merge data (akin to Lab 4).
@@ -110,9 +111,7 @@ russiadata.head()
 
 
 
-Each row starts with the line's index.
-
-To view the data type, run this code:
+Each row starts with the line's index. To view the data type, run this code:
 
 ```
 type(russiadata)
@@ -121,7 +120,7 @@ type(russiadata)
 The output is `pandas.core.frame.DataFrame.`
 
 
-After that, replace the indexing with the date information so that will become the x-axis when we make graphs.
+After that, replace the indexing start with the date information so that will become the graph's x-axis.
 
 ```
 russiadata.set_index("DATE", inplace = True)
@@ -137,27 +136,48 @@ plt.show()
 ```
 
 
+##screenshot
 
+We will then upload, read, re-format, and plot the migration information for Kazakhstan using the file `SMPOPNETMKAZ.csv` and the same techniques as used on the Russian data so the two countries's migration trends can be compared.
 
+Import and the file.
+```
+from google.colab import files
+uploaded = files.upload()
+kazakdata = pd.read_csv('SMPOPNETMKAZ.csv')
+kazakdata.head()
+```
+
+Set the x-axis to `"DATE"` via `.set_index.`
+```
+kazakdata.set_index("DATE", inplace = True) 
+kazakdata.head()
+```
+
+Plot the data.
+
+```
+kazakdata.plot(kind='bar',color='#2786C4')
+plt.title('Kazakhstan Migration 1962-2017')
+plt.ylabel('In and Out Flow')
+plt.show()
+```
+
+##screenshot
+
+And there it is! You have learned how to import GeoJSON and csv files, review data, map parts of GEOJSONS, and create graphs showing migration trends. Thank you for your time and feel free to e-mail me at gpappalardo@clarku.edu with any feedback or ideas about migration mapping and visualization.
 
 ## Credits
 
-Aspects of this tutorial and several parts of the code come from the following sources
+Aspects of this tutorial and several parts of the code come from the following sources:
+
 [DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax)
+
 [DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson`)
+
 [Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and remove indexing)
 
-
-
-
-
-
-
-
-
-
-
-
+As always, thank you to Aaron Deibele for advice and support in the development process.
 
 
 
