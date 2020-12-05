@@ -27,7 +27,7 @@ Visualization of migration between all countries.
 ![](refugeeproject.jpg)
 Web map of global refugee movement.
 
-My contribution to this rich body of work uses Geopandas and Pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration for each between 1962 and 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place.
+My contribution to this rich body of work uses Geopandas and Pandas to visualize the countries of Russia and Kazakhstan and output bar graphs showing net migration for each between 1962 and 2017. These graphs show the pattern of movement described the article from The Diplomat. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place. The instructions include screen shots of several key outputs, but the entire script can be seen and run in [this Colab notebook](https://colab.research.google.com/drive/15FtExkiTSgxkJ-zsCVtVyUXtGfeyz6K3?usp=sharing).
 
 ## Tutorial Instructions
 
@@ -169,15 +169,13 @@ And there it is! You have learned how to import GeoJSON and csv files, review da
 
 ## Credits
 
-Aspects of this tutorial and several parts of the code come from the following sources:
+Aspects of this tutorial and several parts of the code syntax come from the following sources:
 
-[DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax)
+[DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax, particularly with regards to GeoPandas)
 
-[DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson`)
+[DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson` code syntax)
 
 [Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and remove indexing)
-
-As always, thank you to Aaron Deibele for advice and support in the development process.
 
 
 
