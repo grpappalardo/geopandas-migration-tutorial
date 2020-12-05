@@ -169,19 +169,10 @@ And there it is! You have learned how to import GeoJSON and csv files, review da
 
 ## Credits
 
-Aspects of this tutorial and several parts of the code syntax come from the following sources:
+Key aspect of this tutorial and several parts of the code syntax come from the following sources:
 
 [DataCamp Tutorial discussed above](https://www.datacamp.com/community/tutorials/geospatial-data-python) (several parts of the code syntax, particularly with regards to GeoPandas)
 
 [DataHub](https://datahub.io/core/geo-countries) (for `countries.geojson` code syntax)
 
-[Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and remove indexing)
-
-
-
-
-
-
-
-
-
+[Python for Engineers](https://www.pythonforengineers.com/introduction-to-pandas/)(code to read csv files and change indexing)
