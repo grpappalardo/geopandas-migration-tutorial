@@ -35,7 +35,7 @@ First, install Geopandas to Colab.
 !pip install GeoPandas
 ```
 
-Next, import several other useful and realted packages.
+Next, import several other useful and related packages.
 
 ```
 import numpy as np
@@ -71,8 +71,70 @@ countries = geopandas.read_file("countries.geojson")
 countries.head()
 ```
 
+Next, view the top of the dataset
+
+```
+countries = geopandas.read_file("countries.geojson")
+countries.head()
+```
+To plot the countries (save Antarctica, which is distorted and not necessary for this project):
+To pick a different colors for your maps and graphs, go to [htmlcolorcodes.com](htmlcolorcodes.com) and select hex codes
+
+```
+countries[countries['ADMIN'].isin(['Antarctica']) == False].plot(figsize=(50,40), color='#6493DF')
+```
+
+To limit the map to just Russia, make the chosen `'Admin'` of Russia be `True.`
+
+```
+countries[countries['ADMIN'].isin(['Russia']) == True].plot(figsize=(50,40), color='#18A351')
+```
+
+Similarly, we can limit the map to just Kazakhstan.
+
+```
+countries[countries['ADMIN'].isin(['Kazakhstan']) == True].plot(figsize=(40,30), color='#2786C4')
+```
+
+Next, we will make the graphs. The migration data is in csv, comma-separated value, format. This is very common and easily read with Pandas.
+First, upload and read the Russian data in the file `SMPOPNETMRUS.csv.`
+
+```
+from google.colab import files
+uploaded = files.upload()
+russiadata = pd.read_csv('SMPOPNETMRUS.csv')
+russiadata.head()
+
+```
+##SCREEN SHOT OF OUTPUT
 
 
+
+Each row starts with the line's index.
+
+To view the data type, run this code:
+
+```
+type(russiadata)
+```
+
+The output is `pandas.core.frame.DataFrame.`
+
+
+After that, replace the indexing with the date information so that will become the x-axis when we make graphs.
+
+```
+russiadata.set_index("DATE", inplace = True)
+russiadata.head()
+```
+ And then, it is time to plot a graph! Again, any hex color can be used.
+ 
+ ```
+ russiadata.plot(kind='bar',color='#18A351')
+plt.title('Russian Migration 1962-2017')
+plt.ylabel('In and Out Flow')
+plt.show()
+```
 
 
 
