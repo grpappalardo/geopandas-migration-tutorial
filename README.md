@@ -19,7 +19,7 @@ This massive emigration is linked to dropping energy prices and the Kazakh econo
 Mapping and visualizing migration and movement is hard and has been done in several ways over the years.
 
 ![](napoleanmap.jpg)
---map showing the movement of Napoleon's troops into and back out of Russia.
+Charles Joseph Minard's 19th century map showing the movement of Napoleon's troops into and back out of Russia, along with the temperature of locations along the way.
 
 ![](peoplemovin.jpg)
 Visualization of migration between all countries.
@@ -71,6 +71,13 @@ The attibute data can be reviewed by reading the file with Geopandas.
 countries = geopandas.read_file("countries.geojson")
 countries.head()
 ```
+
+
+
+
+
+
+
 
 ## Credits
 
