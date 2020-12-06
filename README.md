@@ -128,7 +128,7 @@ plt.ylabel('In and Out Flow')
 plt.show()
 ```
 
-![](russiagraphjpg.jpg)
+![](images/russiagraphjpg.jpg)
 
 We will then upload, read, re-format, and plot the migration information for Kazakhstan using the file `SMPOPNETMKAZ.csv` and the same techniques as used on the Russian data so the two countries's migration trends can be compared.
 
@@ -139,7 +139,7 @@ uploaded = files.upload()
 kazakdata = pd.read_csv('SMPOPNETMKAZ.csv')
 kazakdata.head()
 ```
-![](kazakdata.jpg)
+![](images/kazakdata.jpg)
 
 Set the x-axis to `"DATE"` via `.set_index.`
 
@@ -156,7 +156,7 @@ plt.title('Kazakhstan Migration 1962-2017')
 plt.ylabel('In and Out Flow')
 plt.show()
 ```
-![](kazakgraph.jpg)
+![](images/kazakgraph.jpg)
 
 And you're done! You have learned how to import GeoJSON and csv files, review data, map parts of GEOJSONS, and create graphs showing migration trends . Thank you for your time and please e-mail me at gpappalardo[@]clarku.edu with any feedback or ideas about migration mapping and visualization.
 
