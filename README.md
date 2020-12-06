@@ -68,7 +68,7 @@ countries.head()
 ```
 
 Plot the world save Antarctica, which is distorted and not necessary for this project, using `False` logic for that one case of `"ADMIN"`.
-(To pick a different colors for your maps and graphs, go to [htmlcolorcodes.com](www.htmlcolorcodes.com) and copy the hex code for a selected color.)
+(To pick a different colors for your maps and graphs, go to [htmlcolorcodes.com](https://htmlcolorcodes.com/) and copy the hex code for a selected color.)
 
 ```
 countries[countries['ADMIN'].isin(['Antarctica']) == False].plot(figsize=(50,40), color='#6493DF')
