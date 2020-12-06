@@ -13,13 +13,13 @@ Technology has to be used for something, and my geographic interest centers on R
 
 Mapping and visualizing migration and movement is hard and has been done in several ways over the years.
 
-![](napoleanmap.jpg)
+![](images/napoleanmap.jpg)
 Charles Joseph Minard's 19th century map showing the movement of Napoleon's troops into and back out of Russia, along with the temperature of locations along the way.
 
-![](peoplemovin.jpg)
+![](images/peoplemovin.jpg)
 Visualization of recent migration between countries.
 
-![](refugeeproject.jpg)
+![](images/refugeeproject.jpg)
 Web map of global refugee movement.
 
 My contribution to this rich body of work uses Geopandas and Pandas to visualize the countries of Russia and Kazakhstan and plot bar graphs showing net migration for each country between 1962 and 2017. The migration data comes from [the Federal Reserve Bank of St. Louis](https://fred.stlouisfed.org/tags/series?t=migration) and all necessary data can be downloaded in the `data` file above. You will also need a [Google Colab](https://colab.research.google.com) account to import the projects the way I did. Other coding environments will work too, ideally a [Jupyter Notebook](https://jupyter.org) so you can view everything in one place. The instructions include screen shots of several key outputs, but the entire script can be seen and run in [this Colab notebook](https://colab.research.google.com/drive/15FtExkiTSgxkJ-zsCVtVyUXtGfeyz6K3?usp=sharing).
@@ -51,7 +51,7 @@ import sys
 'geopandas' in sys.modules
 ```
 
-A `True` return was the goal.
+A `True` return means Geopandas is working.
 
 Upload `countries.geojson` using Colab's import files method. This format holds geographic and attribute data, in this case of the world's countries.
 
@@ -68,7 +68,7 @@ countries.head()
 ```
 
 Plot the world save Antarctica, which is distorted and not necessary for this project, using `False` logic for that one case of `"ADMIN"`.
-(To pick a different colors for your maps and graphs, go to [htmlcolorcodes.com](htmlcolorcodes.com) and copy the hex code for a selected color.)
+(To pick a different colors for your maps and graphs, go to [htmlcolorcodes.com](www.htmlcolorcodes.com) and copy the hex code for a selected color.)
 
 ```
 countries[countries['ADMIN'].isin(['Antarctica']) == False].plot(figsize=(50,40), color='#6493DF')
@@ -130,7 +130,7 @@ plt.show()
 
 ![](images/russiagraphjpg.jpg)
 
-We will then upload, read, re-format, and plot the migration information for Kazakhstan using the file `SMPOPNETMKAZ.csv` and the same techniques as used on the Russian data so the two countries's migration trends can be compared.
+We will then upload, read, re-format, and plot the migration data for Kazakhstan using the file `SMPOPNETMKAZ.csv` and the same techniques as used on the Russian data so the two countries's migration trends can be compared.
 
 Import and read the file.
 ```
@@ -158,7 +158,7 @@ plt.show()
 ```
 ![](images/kazakgraph.jpg)
 
-And you're done! You have learned how to import GeoJSON and csv files, review data, map parts of GEOJSONS, and create graphs showing migration trends . Thank you for your time and please e-mail me at gpappalardo[@]clarku.edu with any feedback or ideas about migration mapping and visualization.
+And you're done! You have learned how to import GeoJSON and csv files, review data, plot maps, and create graphs showing migration trends. Thank you for your time and please e-mail me at gpappalardo[@]clarku.edu with any feedback or ideas about migration mapping and visualization.
 
 ## Credits
 
